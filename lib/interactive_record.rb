@@ -58,5 +58,5 @@ class InteractiveRecord
     found = attributes.collect {|key, value| DB[:conn].execute("SELECT * FROM #{self.table_name} WHERE #{key} = ?", [value])}
     found.flatten
   end
-  
+
 end
